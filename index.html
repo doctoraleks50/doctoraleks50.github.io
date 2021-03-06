@@ -11,7 +11,11 @@
         console.log('is visible: ');
         if (document.getElementById('iframe').style.display === 'none') {
             document.getElementById('iframe').style.display = '';
-            document.getElementById('btn').value = 'скрыть'
+            document.getElementById('btn').value = 'скрыть';
+
+            const v = document.getElementsByClassName('v');
+            console.log('V', v);
+
         } else {
             document.getElementById('btn').value = 'открыть поздравление'
             document.getElementById('iframe').style.display = 'none'
@@ -20,9 +24,9 @@
 
 </script>
 <div class="main"> <!--  -->
-    <h1 class="title1"> C 8 марта !</h1> <!--  -->
+    <div class="title1 v"> C 8 марта !</div> <!--  -->
 
-    <div class="poem"> <!--  -->
+    <div class="poem v"> <!--  -->
         Пускай живет весна в душе, <br> <!--  -->
         Пусть в сердце радость расцветает, <br>
         От зимней спячки ведь уже <br>
