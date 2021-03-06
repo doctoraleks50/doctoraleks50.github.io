@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100ww;
+    background-color: #2ae9c6;
+}
+
+.main {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+
+.title1 {
+    color: white;
+    /* text-align: center; */
+    margin-top: 50px;
+    font-size: 60px;
+}
+
+.poem {
+    /* display: flex; */
+    /* justify-content: center; */
+    font-size: 25px;
+    color: cornsilk;
+}
+
+.gradient-button {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 20px 30px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #ffd900 0%, #f030a6 51%, #c4d10e 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+  }
+  .gradient-button:hover {
+    background-position: right center;
+  }

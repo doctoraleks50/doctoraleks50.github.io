@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!-- первая обязательная строка для распознавания типа документа html -->
+<html> <!-- главный тег --> 
+    <head> <!-- голова документа -->
+        <link rel="stylesheet" href="./index.css"> <!--  -->
+    </head> <!-- конец головы документа --> 
+        <body> <!-- начало тело документа -->;
+            <script>
+                function clicks() {
+                    console.log('cldc');
+                    document.getElementById('iframe').style.display = "";
+                }                   
+
+            </script>
+            <div class="main"> <!--  -->
+                <h1 class="title1">  C 8 марта !</h1> <!--  -->
+
+                <div class="poem"> <!--  -->
+                    Пускай живет весна в душе, <br> <!--  -->
+                    Пусть в сердце радость расцветает, <br>
+                    От зимней спячки ведь уже <br>
+                    Весна весь мир освобождает! <br>
+        
+                    Желаю жить, любить, мечтать <br>
+                    И каждым мигом наслаждаться, <br>
+                    Как солнце яркое, сиять <br>
+                    И лучезарно улыбаться! <br>
+                    <em>от Волык Иннесы  ❤ </em>
+                </div> 
+                
+                <button
+                    class="gradient-button" 
+                    onclick="clicks()"
+                    >
+                    открыть поздравления
+                </button>
+                <iframe 
+                    id="iframe"
+                    width="560" 
+                    height="315"
+                    src="videos/videoplayback.mp4"
+                    frameborder="0" 
+                    allowfullscreen
+                    allow='autoplay'
+                    style="display: none;"
+                    ></iframe>
+            </div>
+        </body> <!-- конец тела документа -->
+ 
+</html><!--  -->
