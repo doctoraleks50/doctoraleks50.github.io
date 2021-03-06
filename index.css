@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    width: 100ww;
+    width: 100vw;
     background-color: #2ae9c6;
 }
 
@@ -28,12 +28,13 @@ body {
 }
 
 .gradient-button {
+    width: 50vh;
     text-decoration: none;
     display: inline-block;
     color: white;
     padding: 20px 30px;
-    margin: 10px 20px;
-    border-radius: 10px;
+    margin-top: 20px;
+    border-radius: 15px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
