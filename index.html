@@ -1,61 +1,80 @@
-<!DOCTYPE html> <!-- первая обязательная строка для распознавания типа документа html -->
-<html> <!-- главный тег -->
-<head> <!-- голова документа -->
-    <link rel="stylesheet" href="./index.css"> <!--  -->
-</head> <!-- конец головы документа -->
-<body> <!-- начало тело документа -->;
-<script>
-    let btnName = "ds"
-
-    function clicks() {
-        console.log('is visible: ');
-        if (document.getElementById('iframe').style.display === 'none') {
-            document.getElementById('iframe').style.display = '';
-            document.getElementById('btn').value = 'скрыть';
-
-            const v = document.getElementsByClassName('v');
-            console.log('V', v);
-
-        } else {
-            document.getElementById('btn').value = 'открыть поздравление'
-            document.getElementById('iframe').style.display = 'none'
-        }
-    }
-
-</script>
-<div class="main"> <!--  -->
-    <div class="title1 v"> C 8 марта !</div> <!--  -->
-
-    <div class="poem v"> <!--  -->
-        Пускай живет весна в душе, <br> <!--  -->
-        Пусть в сердце радость расцветает, <br>
-        От зимней спячки ведь уже <br>
-        Весна весь мир освобождает! <br>
-
-        Желаю жить, любить, мечтать <br>
-        И каждым мигом наслаждаться, <br>
-        Как солнце яркое, сиять <br>
-        И лучезарно улыбаться! <br>
-        <em>от Волык Иннесы ❤ </em>
-    </div>
-
-    <input type="button"
-           id="btn"
-           class="gradient-button"
-           onclick="clicks()"
-           value="открыть поздравление"
-    >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ретрит 20.04</title>
+</head>
+<body>
+<div style="display: flex; flex-direction: column">
+  <div style="display: flex; flex-direction: row; border: #eabf12 3px solid; padding: 5px">
+    <h2> 1 пісчаний трек</h2>
     <iframe
-            id="iframe"
-            width="560"
-            height="315"
-            src="videos/video_2021-03-06_13-58-42.mp4"
-            frameborder="0"
-            allowfullscreen
-            allow='autoplay'
-            style="display: none;"
-    ></iframe>
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4910.194347558137!2d24.144921459078443!3d49.77411823889788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae92c2b1b0937%3A0xad5f4c668e8d7a4b!2sEnduro%20Track!5e1!3m2!1sru!2sua!4v1681991252349!5m2!1sru!2sua"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div style="display: flex; flex-wrap: wrap">
+      <img src="img/2.jpg" alt="пісчаний трек" />
+      <img src="https://lh5.googleusercontent.com/p/AF1QipMwlgN6pJKxvsqR0q4KELSxTtkij2ZLcGh84H7u=s508-k-no" alt="" />
+      <img src="https://lh5.googleusercontent.com/p/AF1QipNQYUdBnUsfCVSSOImpZ_gqzSCR6Ov3Nd-pAot_=s451-k-no" alt="" />
+    </div>
+  </div>
+  <div style="display: flex; flex-direction: row; border: #2fb49b 3px solid; padding: 5px">
+    <h2>2 парк квадрациклів</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23720.026677630554!2d24.15824840798428!3d49.770924601802676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473aea1e7384b397%3A0xd1c4cf9f7c1001ab!2z0JrQktCQ0JTQoNCeINCf0JDQoNCaLSBBVFYgQWR2ZW50dXJlcw!5e1!3m2!1sru!2sua!4v1681992104964!5m2!1sru!2sua"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <img src="img/1.jpg" alt="" />
+  </div>
+  <div style="display: flex; flex-direction: row; border: #a6ee14 3px solid; padding: 5px">
+    <h2>3 (1 з 3 пісчаних кар'єрів)</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13152.726199683832!2d24.105677182687703!3d49.76987830000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae9eb5a1bca57%3A0xe017de104e624bc1!2sPishchanyy%20Kar&#39;yer%20Davydiv!5e1!3m2!1sru!2sua!4v1681992211762!5m2!1sru!2sua"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <img src="img/3.jpg" alt="" />
+  </div>
+  <div style="display: flex; flex-direction: row; border: #c41773 3px solid; padding: 5px">
+    <h2>retro land of cars</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d56090.948826143365!2d24.197496418961645!3d49.755596494665106!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473aeb2ec3e0c259%3A0xd0ab82a958d9d2ce!2sRetro%20Land%20Lviv!5e1!3m2!1sru!2sua!4v1681994541990!5m2!1sru!2sua"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <img src="img/4.jpg" alt="" />
+    <img src="https://lh5.googleusercontent.com/p/AF1QipMz-pn6nR_PuJpBJ_WP0BHSJZ9H7b02PSwk4fAA=s387-k-no" alt="" />
+  </div>
+  <div style="display: flex; flex-direction: row; border: #f11032 3px solid; padding: 5px">
+    <h2>Прокат пітбайк та ендуро мотоциклів</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19648.641192432777!2d24.131660757539777!3d49.75471174639734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae9ce08a903a5%3A0x2908b1932d00b602!2z0J_RgNC-0LrQsNGCINC_0ZbRgtCx0LDQudC6INGC0LAg0LXQvdC00YPRgNC-INC80L7RgtC-0YbQuNC60LvRltCyIFBpdGJpa2UtVG91ci5Mdml2!5e1!3m2!1sru!2sua!4v1681995701032!5m2!1sru!2sua"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <img src="https://lh5.googleusercontent.com/p/AF1QipMYi0HDsShhr7Wsu57iYNTPkjfhlNUm2lJ2wuHu=s393-k-no" alt="" />
+  </div>
+  <div style="display: flex; flex-direction: row; border: #a6ee14 3px solid; padding: 5px">
+    <h2>уруру парк розваг</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d52695.43782952036!2d24.18887112475757!3d49.691953300000016!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473a9323a7b0c65f%3A0x5b8c65df3d194663!2sUruru%20Park%20Rozvah!5e1!3m2!1sru!2sua!4v1681996768563!5m2!1sru!2sua"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <img src="https://lh5.googleusercontent.com/p/AF1QipMLcy6B3Mpwkdpmz1-gnFaTbBhK6r6VwsYVyVcQ=w203-h152-k-no" alt="" />
+    <img src="https://lh5.googleusercontent.com/p/AF1QipMenGdDz7PEpfWUUdRCXOiRi2FBIEH43J_grNK1=s435-k-no" alt="" />
+    <img src="https://lh5.googleusercontent.com/p/AF1QipNRoSuoHxSsy1TajNtfKtrMdx_s89ua_7msKgOP=s435-k-no" alt="" />
+  </div>
+  <div>
+    <a href="https://goo.gl/maps/jkTjXfipNppUw8QX9">закинутий бункер зв'язку</a>
+    <a href="https://swiss-lviv.business.site/?utm_source=gmb&utm_medium=referral">база відпочинку Львівська швейцарія</a>
+  </div>
+  <div style="display: flex; flex-direction: row; border: #6189de 3px solid; padding: 5px">
+    <h2>музей Звенигорода</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26325.03486049514!2d24.230165320711784!3d49.73378610000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473aead66c4a88df%3A0xc7607fb9f197784!2sMuseum%20of%20the%20ancient%20city%20Zvenigorod!5e1!3m2!1sen!2sua!4v1681996539846!5m2!1sen!2sua"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <img src="https://lh5.googleusercontent.com/p/AF1QipM3X1MtQR_9ExM9uDyEMreGldj9AnjeGw_x6Zco=s387-k-no" alt="" />
+    <img src="https://lh5.googleusercontent.com/p/AF1QipNN-gbG_dN2srV5bP_-2AboODJOa7oaMk1c25Ac=s387-k-no" alt="" />
+    <img src="https://lh5.googleusercontent.com/p/AF1QipOHzxcSQ3SB2hwVTW67A1YMVrsqKy_e5-L-mN9l=s677-k-no" alt="" />
+  </div>
 </div>
-</body> <!-- конец тела документа -->
-
-</html><!--  -->
+</body>
+</html>
