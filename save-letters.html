@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Record Ukrainian Alphabet Sounds</title>
+</head>
+<body>
+  <h1>Record Ukrainian Alphabet Sounds</h1>
+  <div id="buttonsContainer">
+    <!-- Add buttons for each letter of the Ukrainian alphabet -->
+  </div>
+  <script>
+    const ukrainianLowerCaseLetters = [
+      'а', 'б', 'в', 'г', 'ґ', 'д', 'е', 'є', 'ж', 'з',
+      'и', 'і', 'ї', 'й', 'к', 'л', 'м', 'н', 'о', 'п',
+      'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ',
+      'ь', 'ю', 'я'
+    ];
+
+    async function recordSound(letter) {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mediaRecorder = new MediaRecorder(stream);
+      const chunks = [];
+
+      mediaRecorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          chunks.push(event.data);
+        }
+      };
+
+      mediaRecorder.onstop = () => {
+        const blob = new Blob(chunks, { type: 'audio/mp3' });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = letter + '.mp3';
+        a.click();
+
+        chunks.length = 0;
+        URL.revokeObjectURL(url);
+      };
+
+      mediaRecorder.start();
+      setTimeout(() => {
+        mediaRecorder.stop();
+      }, 1000); // Record for 1 second, adjust as needed
+    }
+
+    const buttonsContainer = document.getElementById('buttonsContainer');
+    ukrainianLowerCaseLetters.forEach(letter => {
+      const button = document.createElement('button');
+      button.textContent = letter;
+      button.onclick = () => {
+        recordSound(letter);
+      };
+      buttonsContainer.appendChild(button);
+    });
+  </script>
+</body>
+</html>

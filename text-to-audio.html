@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play Ukrainian Alphabet Sounds</title>
+</head>
+<body>
+  <h1>Play text as synthetic audio</h1>
+  <textarea type="text" id="textInput" placeholder="Enter your text"></textarea>
+  <button onclick="playSounds()">Play Sounds</button>
+  <script>
+    // Створимо об'єкти звуків для всіх букв
+    const sounds = {};
+
+    function createAudioObject(letter) {
+      return new Promise(resolve => {
+        const audio = new Audio(`sounds/${letter}.mp3`);
+        audio.onloadeddata = () => resolve(audio);
+      });
+    }
+
+    async function initializeSounds() {
+      const alphabet = 'абвгґдеєжзиіїйклмнопрстуфхцчшщьюя';
+      for (const letter of alphabet) {
+        sounds[letter] = await createAudioObject(letter);
+      }
+      sounds[' '] = await createAudioObject('silence'); // Пауза
+    }
+
+    async function playSound(letter) {
+      const audio = sounds[letter];
+      if (audio) {
+        audio.currentTime = 0;
+        await audio.play();
+      }
+    }
+
+    async function playPause() {
+      const audio = sounds[' ']; // Звук паузи
+      if (audio) {
+        audio.currentTime = 0;
+        await audio.play();
+      }
+    }
+
+    async function playSounds() {
+      await initializeSounds();
+
+      const textInput = document.getElementById('textInput');
+      const inputText = textInput.value.toLowerCase(); // Перетворюємо введений текст на малі літери
+
+      for (const char of inputText) {
+        if (/[а-яґєії]/.test(char)) {
+          await playSound(char);
+        } else if (char === ' ') {
+          await playPause();
+        }
+        await new Promise(resolve => setTimeout(resolve, 250)); // Пауза між звуками
+      }
+    }
+  </script>
+</body>
+</html>
